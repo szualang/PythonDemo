@@ -34,4 +34,12 @@ print( 'tul2的最小值：%s' % min(tul2) )
 # tuple(seq)
 # 将列表转换为元组。
 tul4 = tuple(tul1)
-print( '列表tul1转换为元组, 原来的类型是：', type(tul1), tul4, type(tul4) )
+print(tul1, type(tul1), '\n', tul4, type(tul4), '\n' )
+
+print('元组里面存放列表')
+tul5 = ('a', 'b', tul1)
+print(tul5, '\n')
+
+print('元组里面存放元组')
+tul6 = ('a', 'b', tul2)
+print(tul6, '\n')
