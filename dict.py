@@ -57,7 +57,8 @@ print(dict03, '\n')
 print(dict01)
 print( "键name对应的值 : %s" % dict01.get('name') )
 #  Python 3.X 里不包含 has_key() 函数，被 __contains__(key) 替代:
-print( "键name是否存在于字典中：%s" % dict01.__contains__('name'), '\n')
+# print( "键name是否存在于字典中：%s" % dict01.__contains__('name'), '\n')
+print("键name是否存在于字典中：" , 'name' in dict01, '\n')
 
 print("遍历字典中所有的元素")
 for key, values in dict01.items():
