@@ -26,8 +26,12 @@ print(a, type(a), b, type(b))
 #    元组内置函数
 #============================
 # len(tuple)
-print( 'tul1的长度：%d' % len(tul1) )
+print( 'tul2的长度：%d' % len(tul2) )
 # max(tuple)
-print( 'tul1的最大值：%s' % max(tul1) )
+print( 'tul2的最大值：%s' % max(tul2) )
 # min(tuple)
-print( 'tul1的最小值：%s' % min(tul1) )
+print( 'tul2的最小值：%s' % min(tul2) )
+# tuple(seq)
+# 将列表转换为元组。
+tul4 = tuple(tul1)
+print( '列表tul1转换为元组, 原来的类型是：', type(tul1), tul4, type(tul4) )
