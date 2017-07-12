@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #
 # 字典是另一种可变容器模型，且可存储任意类型对象。
 # 字典的每个键值(key=>value)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号({})中
@@ -8,20 +8,20 @@
 # 值可以取任何数据类型，但键必须是不可变的，如字符串，数字或元组。
 
 # 普通定义
-dict01 = { 'time':'3600s', 'name':'Jack', 'name':'Tom' }
+dict01 = {'time': '3600s', 'name': 'Jack', 'name': 'Tom'}
 print(dict01, '\n')
 
 # 列表，元组转换
-dict02 = dict( a='a', b='b', t='t' )
+dict02 = dict(a='a', b='b', t='t')
 print(dict02, '\n')
 
 # 列表 键 / 值 对
-list = [ ('name', 'Jack') , [ 'role', 'Admin' ] ]
-dict03 = dict( list );
+list = [('name', 'Jack'), ['role', 'Admin']]
+dict03 = dict(list);
 print(dict03, '\n')
 
 # 访问字典里的值
-print( dict03['name'], dict03['role'] , '\n')
+print(dict03['name'], dict03['role'], '\n')
 
 # 修改字典
 dict03['name'] = 'Tom'
@@ -50,21 +50,20 @@ print(dict03, '\n')
 # dict = {['Name']: 'Zara', 'Age': 7}
 # print( "dict['Name']: ", dict['Name'])
 
-#============================
+# ============================
 #    字典内置函数
-#============================
+# ============================
 # 查找
 print(dict01)
-print( "键name对应的值 : %s" % dict01.get('name') )
+print("键name对应的值 : %s" % dict01.get('name'))
 #  Python 3.X 里不包含 has_key() 函数，被 __contains__(key) 替代:
 # print( "键name是否存在于字典中：%s" % dict01.__contains__('name'), '\n')
-print("键name是否存在于字典中：" , 'name' in dict01, '\n')
+print("键name是否存在于字典中：", 'name' in dict01, '\n')
 
 print("遍历字典中所有的元素")
 for key, values in dict01.items():
     print(key, values)
 
 print("删除字典中的键对应的值")
-time  = dict01.pop('time')
-print('删除的值：', time, '删除后的字典：', dict01 )
-
+time = dict01.pop('time')
+print('删除的值：', time, '删除后的字典：', dict01)
