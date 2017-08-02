@@ -63,33 +63,37 @@
 
 
 # 函数作用域
-total = 0 # 这是一个全局变量
-
-def sum( arg1, arg2 ):
-
-    # global total # total使用global声明为全局变量.
-    # nonlocal total # total使用nonlocal声明为非本地变量.
-    total = arg1 + arg2# total在这里是局部变量.
-
-    print ("函数内是局部变量 : ", total)
-    return total
-
-#调用sum函数
-sum( 10, 20 )
-print ("函数外是全局变量 : ", total)
+# total = 0 # 这是一个全局变量
+#
+# def sum( arg1, arg2 ):
+#
+#     # global total # total使用global声明为全局变量.
+#     # nonlocal total # total使用nonlocal声明为非本地变量.
+#     total = arg1 + arg2# total在这里是局部变量.
+#
+#     print ("函数内是局部变量 : ", total)
+#     return total
+#
+# #调用sum函数
+# sum( 10, 20 )
+# print ("函数外是全局变量 : ", total)
 
 
 # 当内部作用域想修改外部作用域的变量时，就要用到global
 # 如果要修改嵌套作用域（enclosing 作用域，外层非全局作用域）中的变量则需要 nonlocal 关键字
+# http://www.cnblogs.com/brad1994/p/6533267.html
 
+x = 0
 def outer():
-    num = 10
+    x = 1
     def inner():
-        # global num   # nonlocal关键字声明
-        nonlocal num   # nonlocal关键字声明
-        num = 100
-        print(num)
+        # global x
+        # nonlocal x
+        x = 2
+        print("内部x:", x)
+
     inner()
-    print(num)
+    print("外部x:", x)
 
 outer()
+print("全局x:", x)
