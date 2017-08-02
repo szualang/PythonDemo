@@ -11,6 +11,10 @@ Python系列教程demo
 ### Python系列教程（三）——基本结构
 * 循环 (loop.py)
 * 判断 (ifelse.py)
+
+### Python系列教程（四）——函数
+* 函数（func.py）
+
 ***
 >更多教程请阅读:   
 >[菜鸟教程-python3教程](http://www.runoob.com/python3/python3-tutorial.html)   
